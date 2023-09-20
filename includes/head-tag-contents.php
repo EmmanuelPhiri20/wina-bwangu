@@ -6,8 +6,6 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" /> 
 <?php } ?>
-
-<link rel="stylesheet" type="text/css" href="../assets/dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
 <style>
 	#main-content {
 		margin-top:20px;
