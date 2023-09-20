@@ -32,7 +32,21 @@
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Select Booth
                         </button>
-                        <ul class="dropdown-menu" id="myDropdown" aria-labelledby="dropdownMenuButton">
+                        <ul class="dropdown-menu booth-dropdown" id="myDropdown" aria-labelledby="dropdownMenuButton">
+                            <!-- Dropdown items will be loaded here -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h5>Booth</h5>
+                    <h6>Name: </h6> <span id="boothName"></span>
+                    <h6>Location: </h6> <span id="boothLocation"></span>
+
+                    <div class="dropdown" style="margin-top: 15px;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Service
+                        </button>
+                        <ul class="dropdown-menu service-dropdown" aria-labelledby="dropdownMenuButton2">
                             <!-- Dropdown items will be loaded here -->
                         </ul>
                     </div>
@@ -55,8 +69,8 @@
                 url: 'core/location-data.php', // URL of your PHP script
                 method: 'GET',
                 success: function (data) {
-                    $('.dropdown-menu').empty();
-                    $('.dropdown-menu').append(data); // Replace the content of the dropdown menu
+                    $('.booth-dropdown').empty();
+                    $('.booth-dropdown').append(data); // Replace the content of the dropdown menu
                 },
                 error: function (xhr, status, error) {
                     console.log("OH NOO");
