@@ -6,7 +6,9 @@
     echo '<li><input class="dropdown-item" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"></li>';
 
     // Generate the dropdown options
+    $counter = 1;
     foreach ($options as $option) {
-        echo '<li><a class="dropdown-item" href="#">' . $option . '</a></li>';
+        echo '<li><a class="dropdown-item booth" href="#" data-booth-id="'. $counter .'">' . $option . '</a></li>';
+        $counter++;
     }
 ?>

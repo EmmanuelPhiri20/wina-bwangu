@@ -1,14 +1,15 @@
 <?php
-    include 'config.php';
-    try
-    {
-            $host=$config['DB_HOST'];
-            $dbname=$config['DB_DATABASE'];
-            $conn= new PDO("mysql:host=$host;dbname=$dbname",$config['DB_USERNAME'],$config['DB_PASSWORD']);
-            //new PDO("mysql:host=$hostname;dbname=mysql", $username, $password);
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "logbook";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    // Check connection
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
     }
-    catch(PDOException $e)
-    {
-        echo "Error:".$e->getMessage();
-    }
+    // echo "Connected successfully";
 ?>
