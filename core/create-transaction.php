@@ -3,13 +3,23 @@
     include_once("../includes/DBConnection.php");
 
     $boothName = isset($_POST['boothName']) ? $_POST['boothName'] : 'Sample Name';
-    $location = isset($_POST['location']) ? $_POST['location'] : 'Mazabuka';
     $service = isset($_POST['service']) ? $_POST['service'] : 'Opay';
-    $revenuePerKwacha = isset($_POST['revenuePerKwacha']) ? $_POST['revenuePerKwacha'] : 0.05;
-    $amount = isset($_POST['amount']) ? $_POST['amount'] : 234.0;
+    $amount = isset($_POST['amount']) ? $_POST['amount'] : 0;
+
+    // Fetch service and use appropriate revenue per kwacha value
+    $getServiceQuery = "SELECT * FROM services WHERE name = '$service'";
+    $serviceResult = $conn->query($getServiceQuery);
+    $serviceRow = $serviceResult->fetch_assoc();
+    $serviceRevenuePerKwacha = $serviceRow["revenue_per_kwacha"];
+
+    // Get booth using given booth name
+    $getBoothQuery = "SELECT * FROM booths WHERE name = '$boothName'";
+    $boothResult = $conn->query($getBoothQuery);
+    $boothRow = $boothResult->fetch_assoc();
+    $location = $boothRow["location"];
 
     $query =  "INSERT INTO transactions (booth_name, location, service, revenue_per_kwacha, amount, transaction_id)
-        VALUES ('$boothName','$location','$service','$revenuePerKwacha','$amount',0)";
+        VALUES ('$boothName','$location','$service','$serviceRevenuePerKwacha','$amount',0)";
 
     $res = $conn->query($query);
 
