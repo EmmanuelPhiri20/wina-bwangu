@@ -1,0 +1,31 @@
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+
+# Database dumps
+*.sql
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+
+# PHP dependencies (if Composer is introduced later)
+vendor/
