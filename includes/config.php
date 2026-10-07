@@ -15,7 +15,7 @@
 			break;
 		default:
 			$CURRENT_PAGE = "Index";
-			$PAGE_TITLE = "Winabwangu";
+			$PAGE_TITLE = "Wina bwangu";
 	}
 
 
