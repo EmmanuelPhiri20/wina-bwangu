@@ -138,7 +138,7 @@ Conceptually:
 
 ```text
 
-Cumulative Revenue = Revenue Per Kwacha Ã— Total Transaction Amount
+Cumulative Revenue = Revenue Per Kwacha x Total Transaction Amount
 
 ```
 
@@ -172,7 +172,7 @@ The user begins by selecting the booth and service for which a transaction or ca
 
 
 
-!\[Booth and service selection](docs/screenshots/01-booth-and-service-selection.png)
+![Booth and service selection](docs/screenshots/01-booth-and-service-selection.png)
 
 
 
@@ -184,7 +184,7 @@ Once the appropriate booth and service are selected, the application can use the
 
 
 
-!\[Selected booth and service](docs/screenshots/02-booth-and-service-selected.png)
+![Selected booth and service](docs/screenshots/02-booth-and-service-selected.png)
 
 
 
@@ -196,7 +196,7 @@ The system processes transaction information using the selected booth and servic
 
 
 
-!\[Transaction calculation](docs/screenshots/03-transaction-calculation.png)
+![Transaction calculation](docs/screenshots/03-transaction-calculation.png)
 
 
 
@@ -208,7 +208,7 @@ A booth and service can also be selected for cumulative analysis.
 
 
 
-!\[Cumulative summary selection](docs/screenshots/04-cumulative-summary-selection.png)
+![Cumulative summary selection](docs/screenshots/04-cumulative-summary-selection.png)
 
 
 
@@ -220,7 +220,7 @@ The application retrieves matching transactions and calculates the cumulative tr
 
 
 
-!\[Cumulative calculation results](docs/screenshots/05-cumulative-calculation-results.png)
+![Cumulative calculation results](docs/screenshots/05-cumulative-calculation-results.png)
 
 
 
@@ -232,7 +232,7 @@ Cumulative information can also be represented visually.
 
 
 
-!\[Cumulative pie chart](docs/screenshots/06-cumulative-pie-chart.png)
+![Cumulative pie chart](docs/screenshots/06-cumulative-pie-chart.png)
 
 
 
@@ -260,7 +260,7 @@ Booths are stored with identifying information and their associated locations.
 
 
 
-!\[Booths database table](docs/screenshots/07-booths-database-table.png)
+![Booths database table](docs/screenshots/07-booths-database-table.png)
 
 
 
@@ -272,7 +272,7 @@ Service records contain information used by the transaction and cumulative calcu
 
 
 
-!\[Services database table](docs/screenshots/08-services-database-table.png)
+![Services database table](docs/screenshots/08-services-database-table.png)
 
 
 
@@ -284,7 +284,7 @@ The application maintains information about which services are provided by indiv
 
 
 
-!\[Provided services database table](docs/screenshots/09-provided-services-database-table.png)
+![Provided services database table](docs/screenshots/09-provided-services-database-table.png)
 
 
 
@@ -296,7 +296,7 @@ Recorded transactions contain information such as the booth, location, service, 
 
 
 
-!\[Transactions database table](docs/screenshots/10-transactions-database-table.png)
+![Transactions database table](docs/screenshots/10-transactions-database-table.png)
 
 
 
@@ -331,76 +331,38 @@ Recorded transactions contain information such as the booth, location, service, 
 
 
 ---
-
-
-
-## Project Structure
-
-
-
-```text
-
-wina-bwangu/
-
-â”‚
-
-â”œâ”€â”€ assets/
-
-â”‚   â””â”€â”€ dist/
-
-â”‚       â””â”€â”€ bootstrap-5.3.2-dist/
-
-â”‚
-
-â”œâ”€â”€ core/
-
-â”‚   â”œâ”€â”€ booth-data.php
-
-â”‚   â”œâ”€â”€ calculate-cumulative-total.php
-
-â”‚   â”œâ”€â”€ create-transaction.php
-
-â”‚   â”œâ”€â”€ get-booth-services.php
-
-â”‚   â”œâ”€â”€ get-service-revenue.php
-
-â”‚   â””â”€â”€ location-data.php
-
-â”‚
-
-â”œâ”€â”€ docs/
-
-â”‚   â””â”€â”€ screenshots/
-
-â”‚
-
-â”œâ”€â”€ includes/
-
-â”‚   â”œâ”€â”€ config.php
-
-â”‚   â”œâ”€â”€ DBConnection.php
-
-â”‚   â”œâ”€â”€ head-tag-contents.php
-
-â”‚   â””â”€â”€ header-nav.php
-
-â”‚
-
-â”œâ”€â”€ php-templates/
-
-â”‚   â””â”€â”€ locations.php
-
-â”‚
-
-â”œâ”€â”€ index.php
-
-â”œâ”€â”€ .gitignore
-
-â””â”€â”€ README.md
-
 ```
 
-
+wina-bwangu/
+|
+|-- assets/
+|   `-- dist/
+|       `-- bootstrap-5.3.2-dist/
+|
+|-- core/
+|   |-- booth-data.php
+|   |-- calculate-cumulative-total.php
+|   |-- create-transaction.php
+|   |-- get-booth-services.php
+|   |-- get-service-revenue.php
+|   `-- location-data.php
+|
+|-- docs/
+|   `-- screenshots/
+|
+|-- includes/
+|   |-- config.php
+|   |-- DBConnection.php
+|   |-- head-tag-contents.php
+|   `-- header-nav.php
+|
+|-- php-templates/
+|   `-- locations.php
+|
+|-- index.php
+|-- .gitignore
+`-- README.md
+```
 
 ---
 
